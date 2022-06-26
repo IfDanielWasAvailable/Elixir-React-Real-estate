@@ -1,10 +1,10 @@
 import React,{useEffect,useState,useRef} from 'react'
-import { FaSlideshare } from 'react-icons/fa';
+import { FaRunning, FaSlideshare } from 'react-icons/fa';
 import styled, {css} from 'styled-components/macro'
 import { SliderData } from '../data/SliderData';
 import { Button } from './Button';
 import {IoMdArrowRoundForward} from 'react-icons/io';
-import{IoArrowForward,IoArrowBack} from 'react-icons/io5';
+import{IoArrowForward,IoArrowBack, IoNavigateCircle} from 'react-icons/io5';
 import App from '../App';
 
 const HeroSection =styled.section`
@@ -159,6 +159,7 @@ const Hero = ({}) => {
     const nextSlide= () => {
         setCurrent(current === lenght-1 ? 0 : current+1);
 
+
         
     };
 
@@ -170,7 +171,19 @@ const Hero = ({}) => {
     if(!Array.isArray(SliderData) || SliderData.lenght<=0){
         return null
     };
+    if(!Array.isArray(SliderData) || SliderData.lenght<=0){
+        return null
+        
+        
+    }
+
     
+    
+
+    
+    
+    
+
     
 
 
@@ -189,15 +202,17 @@ const Hero = ({}) => {
                                     <Button to={slide.path} primary='true'
                                     css={`
                                     max-width:160px;
-                                    `}
+                                      `}
+
                                     >
                                     {slide.label}
                                     <Arrow/>
                                     </Button>
+                                    
                                   </HeroContent>  
                         </HeroSlider>
                         )}
-                        
+
                     </HeroSlide>
                 )
             } )}

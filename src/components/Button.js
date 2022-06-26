@@ -18,7 +18,7 @@ padding: ${({big})=>(big ? '16px 40px' :'14px 24px')};
 color:${({primary})=>(primary ?'#fff' : '#00d1a')};
 font-size: ${({big}) => (big ? '20px' :'14px ')};
 
-    
+
 
 
     
